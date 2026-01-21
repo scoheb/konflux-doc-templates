@@ -1,8 +1,10 @@
-# ✎ Konflux Doc Templates ✎
+# Konflux Doc Templates ✍
 
 ## Description
 
-The Konflux Doc Templates repository contains documentation templates for Konflux pipelines in the YAML format. 
+The Konflux Doc Templates repository contains documentation templates for Konflux pipelines in [Jinja](https://jinja.palletsprojects.com/en/stable/) YAML format. 
+Jinja is suitable for documentation templates because it moves logic into the templates instead of the code.
+
 Currently, the following templates are available: 
 
 * `container-y.yaml`: Container template for y-stream
@@ -17,7 +19,7 @@ The templates contains the following shared variables:
 *  `{%- set rhel_minor_version = product_version_str.split('.')[:2] | join('.') %}`: For example 10.1 for RHEL 10.1
 
 
-The templates contains the following replaceable items:
+The template defines shared variables in the `vars` section:
 
 * `{{ advisory.spec.severity }}`: For RHSA advisory type only
 * `{{ advisory.spec.product_name }}`
@@ -48,6 +50,9 @@ Differences between templates are summarized in the following table:
 
 
 ## Acknowledgement
+
+This work is based on my `errata_doc_approver.py` script, which approves advisories in the Errata Tool and is provided in the [docs-errata-approver](https://gitlab.cee.redhat.com/gnecasov/docs-errata-approver) repository. 
+
 
 ♥️ I would like to thank the following colleagues . Without their support it would have been impossible to complete this work:
 * Konflux team: Chuang Cao and Lu Zhang. 
