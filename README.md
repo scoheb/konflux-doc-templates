@@ -1,4 +1,4 @@
-# Konflux Doc Templates
+# ✎ Konflux Doc Templates ✎
 
 ## Description
 
@@ -19,7 +19,7 @@ The templates contains the following shared variables:
 
 The templates contains the following replaceable items:
 
-* `{{ advisory.spec.severity }}`: for RHSA advisory type only
+* `{{ advisory.spec.severity }}`: For RHSA advisory type only
 * `{{ advisory.spec.product_name }}`
 * `{{ package_name }}`: For z-stream RPM templates only
 * `{{ image_description }}`: For z-stream container templates only
@@ -29,7 +29,7 @@ Differences between templates are summarized in the following table:
 
 *Note*: The `solution` field is the same for all cases, therefore it is not listed in the table. 
 
-| Advisory Type | Errata Tool Field Name | y-stream release | z-stream release |
+| Advisory type | YAML field name | y-stream release | z-stream release |
 |--------------|------------------------|------------------|------------------|
 | **RHSA** | synopsis | ✅ Multi component | ✅ Single component |
 |  | topic | ✅ Multi component | ✅ Single component |
@@ -49,7 +49,7 @@ Differences between templates are summarized in the following table:
 
 ## Acknowledgement
 
-I would like to thank the following colleagues. Without their support it would have been impossible to complete this work:
+♥️ I would like to thank the following colleagues . Without their support it would have been impossible to complete this work:
 * Konflux team: Chuang Cao and Lu Zhang. 
 * CCS team: Marci Wolfe, Catherine Tomasko.
 * All engineers, package owners, QAs, and so on for their valuable discussions and insights. 
