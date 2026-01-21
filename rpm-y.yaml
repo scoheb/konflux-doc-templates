@@ -1,0 +1,40 @@
+---
+vars: |
+  {%- set product_version_str = advisory.spec.product_version | string() %}
+  {%- set rhel_major_version = product_version_str.split('.')[0] %} 
+  {%- set rhel_minor_version = product_version_str.split('.')[:2] | join('.') %}
+synopsis: |
+  {%- if advisory.spec.type == "RHSA" %}
+  {{ advisory.spec.severity }}: Multiple packages security update
+  {%- else %}
+  Multiple packages bug fix and enhancement update
+  {%- endif %}
+topic: |
+  An update for multiple packages is now available for {{ advisory.spec.product_name }}.
+
+  {%- if advisory.spec.type == "RHSA" %}
+  Red Hat Product Security has rated this update as having a security impact of {{ advisory.spec.severity }}. 
+  A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.
+  {%- endif %}
+description: |
+  For detailed information about the updated packages, see the Updated Packages tab.
+
+  {%- if advisory.spec.type == 'RHSA' %}        
+  For detailed information about the security updates, see the Fixes and CVEs sections.
+
+  For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+
+  Additional Changes:
+
+  For detailed information on changes in this release, see the Red Hat Enterprise Linux {{ rhel_minor_version }} Release Notes linked from the References section.
+  {%- else %}
+  For detailed information about bug fix and enhancement updates, see the Fixes section.
+  {%- endif %}
+solution: |
+  For details on how to apply this update, which includes the changes described in this advisory, refer to:
+  https://access.redhat.com/articles/11258
+references: |
+  {%- if advisory.spec.type == "RHSA" %}
+  https://access.redhat.com/security/updates/classification/#{{ advisory.spec.severity }}
+  {%- endif %}
+  docs.redhat.com/en/documentation/red_hat_enterprise_linux/{{ rhel_major_version }}/html/{{ rhel_minor_version }}_release_notes/index
