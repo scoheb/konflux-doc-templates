@@ -54,7 +54,7 @@ Differences between templates are summarized in the following table:
 This work is based on my `errata_doc_approver.py` script, which approves advisories in the Errata Tool and is provided in the [docs-errata-approver](https://gitlab.cee.redhat.com/gnecasov/docs-errata-approver) repository. 
 
 
-♥️ I would like to thank the following colleagues . Without their support it would have been impossible to complete this work:
+♥️ I would like to thank the following colleagues. Without their support it would have been impossible to complete this work:
 * Konflux team: Chuang Cao and Lu Zhang. 
 * CCS team: Marci Wolfe, Catherine Tomasko.
 * All engineers, package owners, QAs, and so on for their valuable discussions and insights. 
