@@ -1,0 +1,9 @@
+---
+synopsis: |
+  rhel-els container image update
+topic: |
+  Updated rhel-els container image is now available for use only by other Red Hat products.
+description: |
+  The rhel-els container image is designed and engineered to be used by other Red Hat products. This image is only supported for approved Red Hat products. This image is maintained by Red Hat and updated regularly.
+solution: |
+  The container image provided by this update is used only as the base layer for other Red Hat products. Direct use of this image is neither recommended nor supported.
