@@ -47,7 +47,4 @@ solution: |
 
 references: |
   https://catalog.redhat.com/software/containers/search
-  {%- if advisory.spec.type == "RHSA" %}
-  https://access.redhat.com/security/updates/classification/#{{ advisory.spec.severity }}
-  {%- endif %}
   docs.redhat.com/en/documentation/red_hat_enterprise_linux/{{ rhel_major_version }}/html/{{ rhel_minor_version }}_release_notes/index

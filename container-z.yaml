@@ -37,6 +37,3 @@ solution: |
 
 references: |
   https://catalog.redhat.com/software/containers/search
-  {%- if advisory.spec.type == "RHSA" %}
-  https://access.redhat.com/security/updates/classification/#{{ advisory.spec.severity }}
-  {%- endif %}
